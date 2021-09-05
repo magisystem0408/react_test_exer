@@ -9,7 +9,7 @@ function Render(props) {
             <button>Click</button>
             <button>Click2</button>
             <p>Udemy</p>
-            <span>@react</span>
+            <span data-testid="copyright">@react</span>
 
 
         </div>

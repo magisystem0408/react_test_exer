@@ -5,6 +5,8 @@ import Render from "./Render";
 
 
 describe("Rendering",  () => {
+
+    // それぞれのコンポーネントがまず存在しているかをテストする
     it("Shold render all the elements correctly",()=>{
         render(<Render />);
 
@@ -20,6 +22,16 @@ describe("Rendering",  () => {
 
         expect(screen.getAllByRole("button")[0]).toBeTruthy()
 
+        // expect(screen.getByText("Udemy")[0]).toBeTruthy()
+
+
+        // expect(screen.queryByText("fasf]j")).toBeNull()
+
+
+        // idを使用して、取得する場合
+        expect(screen.getByTestId("copyright")).toBeTruthy()
+
+        screen.debug(screen.getByText("Udemy"))
 
     })
 });
